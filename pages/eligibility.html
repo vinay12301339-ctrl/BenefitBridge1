@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Check your eligibility for Indian government welfare schemes. Answer simple questions and get matched to PM Kisan, Ayushman Bharat, PM Awas Yojana and more." />
+  <title>Eligibility Checker — BenefitBridge</title>
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#FF9933" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" aria-label="BenefitBridge Home">
+        <div class="nav-logo-icon">🇮🇳</div>
+        <span class="nav-logo-text">Benefit<span>Bridge</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="schemes.html">Schemes</a></li>
+        <li><a href="eligibility.html" class="active">Check Eligibility</a></li>
+        <li><a href="tracker.html">Track Application</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="hi">हिंदी</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="tricolor-divider" aria-hidden="true"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Eligibility Checker</span>
+      </nav>
+      <h1>✅ Eligibility Checker</h1>
+      <p>Answer a few simple questions to discover government schemes you're eligible for</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="eligibility-checker-page">
+    <div class="container">
+      <div class="checker-card fade-in">
+        <!-- Checker Header -->
+        <div class="checker-header">
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:2rem">🎯</span>
+            <div>
+              <h2 style="margin:0;color:white;font-size:1.4rem">Find Your Eligible Schemes</h2>
+              <p style="margin:0;opacity:0.9;font-size:0.9rem">Takes less than 2 minutes • 100% Free • No registration</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div style="padding:1.5rem 2rem 0">
+          <div class="progress-container">
+            <div class="progress-steps" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-label="Step progress">
+              <div class="progress-fill" id="progressFill" style="width:0%"></div>
+              <div class="progress-step active" data-step="1">
+                <div class="step-dot">1</div>
+                <span class="step-label">Personal Info</span>
+              </div>
+              <div class="progress-step" data-step="2">
+                <div class="step-dot">2</div>
+                <span class="step-label">Economic Info</span>
+              </div>
+              <div class="progress-step" data-step="3">
+                <div class="step-dot">3</div>
+                <span class="step-label">Social Category</span>
+              </div>
+              <div class="progress-step" data-step="4">
+                <div class="step-dot">4</div>
+                <span class="step-label">Additional Info</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form id="checkerForm" novalidate>
+          <div class="checker-body">
+
+            <!-- Step 1: Personal Info -->
+            <div class="form-step active" data-step="1">
+              <h3 style="margin-bottom:1.5rem;color:var(--text)">👤 Personal Information</h3>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+                <div class="form-group">
+                  <label class="form-label" for="age">Age <span style="color:#dc3545">*</span></label>
+                  <input type="number" id="age" class="form-control" placeholder="Enter your age" min="1" max="120" required aria-required="true" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="gender">Gender <span style="color:#dc3545">*</span></label>
+                  <select id="gender" class="form-control" required aria-required="true">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other / Prefer not to say</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="state">State / Union Territory <span style="color:#dc3545">*</span></label>
+                <select id="state" class="form-control" required aria-required="true">
+                  <option value="">Select your State / UT</option>
+                  <optgroup label="Major States">
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                  </optgroup>
+                  <optgroup label="Union Territories">
+                    <option>Andaman & Nicobar Islands</option>
+                    <option>Chandigarh</option>
+                    <option>Dadra & Nagar Haveli and Daman & Diu</option>
+                    <option>Delhi</option>
+                    <option>Jammu & Kashmir</option>
+                    <option>Ladakh</option>
+                    <option>Lakshadweep</option>
+                    <option>Puducherry</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="district">District (Optional)</label>
+                <input type="text" id="district" class="form-control" placeholder="Enter your district name" />
+              </div>
+            </div>
+
+            <!-- Step 2: Economic Info -->
+            <div class="form-step" data-step="2">
+              <h3 style="margin-bottom:1.5rem;color:var(--text)">💰 Economic Information</h3>
+
+              <div class="form-group">
+                <label class="form-label" for="income">Annual Household Income (₹) <span style="color:#dc3545">*</span></label>
+                <select id="income" class="form-control" required aria-required="true">
+                  <option value="">Select income range</option>
+                  <option value="0">No Income / Below Poverty Line</option>
+                  <option value="50000">Up to ₹50,000</option>
+                  <option value="100000">₹50,001 – ₹1,00,000</option>
+                  <option value="150000">₹1,00,001 – ₹1,50,000</option>
+                  <option value="250000">₹1,50,001 – ₹2,50,000</option>
+                  <option value="500000">₹2,50,001 – ₹5,00,000</option>
+                  <option value="750000">₹5,00,001 – ₹7,50,000</option>
+                  <option value="1000000">₹7,50,001 – ₹10,00,000</option>
+                  <option value="1500000">₹10,00,001 – ₹15,00,000</option>
+                  <option value="2000000">Above ₹15,00,000</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="occupation">Primary Occupation <span style="color:#dc3545">*</span></label>
+                <select id="occupation" class="form-control" required aria-required="true">
+                  <option value="">Select occupation</option>
+                  <option value="farmer">🌾 Farmer / Agriculturist</option>
+                  <option value="laborer">🔨 Daily Wage Laborer</option>
+                  <option value="student">📚 Student</option>
+                  <option value="salaried">💼 Salaried Employee</option>
+                  <option value="self-employed">🏪 Self-Employed / Business</option>
+                  <option value="unemployed">🔍 Unemployed / Job Seeker</option>
+                  <option value="homemaker">🏠 Homemaker</option>
+                  <option value="retired">🎯 Retired</option>
+                </select>
+              </div>
+
+              <div style="background:rgba(255,153,51,0.08);border-radius:var(--radius-sm);padding:1rem;font-size:0.85rem;color:var(--text-muted)">
+                💡 <strong>Tip:</strong> Your income and occupation help us find the most relevant schemes. This information is never stored or shared.
+              </div>
+            </div>
+
+            <!-- Step 3: Social Category -->
+            <div class="form-step" data-step="3">
+              <h3 style="margin-bottom:1.5rem;color:var(--text)">🤝 Social Category</h3>
+
+              <div class="form-group">
+                <label class="form-label" for="socialCategory">Social Category <span style="color:#dc3545">*</span></label>
+                <select id="socialCategory" class="form-control" required aria-required="true">
+                  <option value="">Select your category</option>
+                  <option value="General">General (Open Category)</option>
+                  <option value="OBC">OBC (Other Backward Classes)</option>
+                  <option value="SC">SC (Scheduled Caste)</option>
+                  <option value="ST">ST (Scheduled Tribe)</option>
+                  <option value="Minority">Religious Minority (Muslim/Christian/Sikh/Buddhist/Parsi/Jain)</option>
+                  <option value="EWS">EWS (Economically Weaker Section)</option>
+                </select>
+              </div>
+
+              <div style="background:rgba(0,0,128,0.06);border-radius:var(--radius-sm);padding:1rem;font-size:0.85rem;color:var(--text-muted)">
+                ℹ️ Social category determines eligibility for reserved category schemes like scholarships, Standup India loans, ST/SC welfare programs, and Minority scholarship schemes.
+              </div>
+            </div>
+
+            <!-- Step 4: Additional Info -->
+            <div class="form-step" data-step="4">
+              <h3 style="margin-bottom:1.5rem;color:var(--text)">📋 Additional Information</h3>
+
+              <div style="display:grid;gap:1rem">
+                <label class="checkbox-option" style="border-radius:var(--radius-sm);padding:0.85rem 1rem">
+                  <input type="checkbox" id="bplCard" />
+                  <span>🟡</span>
+                  <div>
+                    <strong>BPL Card Holder</strong>
+                    <div style="font-size:0.8rem;color:var(--text-muted)">Do you have a Below Poverty Line ration card?</div>
+                  </div>
+                </label>
+
+                <label class="checkbox-option" style="border-radius:var(--radius-sm);padding:0.85rem 1rem">
+                  <input type="checkbox" id="disability" />
+                  <span>♿</span>
+                  <div>
+                    <strong>Person with Disability</strong>
+                    <div style="font-size:0.8rem;color:var(--text-muted)">Do you have a disability certificate?</div>
+                  </div>
+                </label>
+
+                <label class="checkbox-option" style="border-radius:var(--radius-sm);padding:0.85rem 1rem">
+                  <input type="checkbox" id="ownsLand" />
+                  <span>🌱</span>
+                  <div>
+                    <strong>Land Owner</strong>
+                    <div style="font-size:0.8rem;color:var(--text-muted)">Do you own agricultural or residential land?</div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-group" style="margin-top:1.25rem">
+                <label class="form-label" for="numChildren">Number of Children</label>
+                <select id="numChildren" class="form-control">
+                  <option value="0">None</option>
+                  <option value="1">1 child</option>
+                  <option value="2">2 children</option>
+                  <option value="3">3 children</option>
+                  <option value="4">4 or more children</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Buttons -->
+          <div class="checker-footer">
+            <button type="button" id="prevBtn" class="btn btn-outline" style="display:none">
+              ← Previous
+            </button>
+            <button type="button" id="nextBtn" class="btn btn-primary">
+              Next →
+            </button>
+            <button type="button" id="checkBtn" class="btn btn-secondary" style="display:none">
+              🎯 Find My Schemes
+            </button>
+          </div>
+        </form>
+
+        <!-- Results Page -->
+        <div class="results-page" id="resultsPage">
+          <div class="checker-body">
+            <div style="text-align:center;margin-bottom:2rem">
+              <span style="font-size:2.5rem">🎉</span>
+              <h2 id="resultsCount" style="margin:0.75rem 0 0.5rem">Finding your schemes...</h2>
+              <p style="font-size:0.9rem">Sorted by best match. Click any scheme for full details.</p>
+            </div>
+            <div id="resultsList">
+              <div class="loading-spinner"></div>
+            </div>
+            <div style="text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+              <a href="schemes.html" class="btn btn-outline" style="margin-right:0.75rem">Browse All Schemes</a>
+              <button class="btn btn-primary" onclick="restartChecker()">↺ Start Over</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Card -->
+      <div class="card fade-in" style="max-width:720px;margin:2rem auto 0;padding:1.5rem">
+        <div style="display:flex;align-items:flex-start;gap:1rem">
+          <span style="font-size:1.75rem;flex-shrink:0">🔒</span>
+          <div>
+            <h4 style="margin-bottom:0.4rem">Your Privacy is Protected</h4>
+            <p style="margin:0;font-size:0.88rem;color:var(--text-muted)">BenefitBridge does not collect, store, or share any of your personal information. All eligibility calculations happen entirely in your browser. No data is sent to any server.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo-text">Benefit<span>Bridge</span></span>
+          <p>Connecting India's citizens to government welfare schemes.</p>
+          <p class="footer-disclaimer">⚠️ Informational platform only. Apply at official government portals.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="schemes.html">📋 All Schemes</a></li>
+            <li><a href="tracker.html">📊 Track Application</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Help</div>
+          <ul class="footer-links">
+            <li><a href="about.html">ℹ️ About</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="about.html#faq">❓ FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Official Portals</div>
+          <ul class="footer-links">
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">india.gov.in</a></li>
+            <li><a href="https://pmkisan.gov.in" target="_blank" rel="noopener">PM Kisan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BenefitBridge. Made with ❤️ for India.</p>
+        <p>🇮🇳 Jan Seva — सेवा परमो धर्म</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/eligibility.js"></script>
+  <script src="../js/voice-assistant.js"></script>
+</body>
+</html>

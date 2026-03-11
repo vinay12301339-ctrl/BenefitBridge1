@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact BenefitBridge for help with government schemes. Find helpline numbers, official portals, and get assistance." />
+  <title>Contact & Help — BenefitBridge</title>
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#FF9933" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" aria-label="BenefitBridge Home">
+        <div class="nav-logo-icon">🇮🇳</div>
+        <span class="nav-logo-text">Benefit<span>Bridge</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="schemes.html">Schemes</a></li>
+        <li><a href="eligibility.html">Check Eligibility</a></li>
+        <li><a href="tracker.html">Track Application</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="hi">हिंदी</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="tricolor-divider" aria-hidden="true"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Contact & Help</span>
+      </nav>
+      <h1>📞 Contact & Help</h1>
+      <p>Get help with government schemes, report inaccuracies, or reach government helplines</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="fade-in">
+          <h2 style="margin-bottom:1.5rem">Get in Touch</h2>
+          <div class="card" style="padding:2rem">
+            <form id="contactForm" novalidate>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+                <div class="form-group">
+                  <label class="form-label" for="contactName">Full Name <span style="color:#dc3545">*</span></label>
+                  <input type="text" id="contactName" class="form-control" placeholder="Your full name" required aria-required="true" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactPhone">Phone Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="10-digit mobile number" pattern="[0-9]{10}" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address <span style="color:#dc3545">*</span></label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="your@email.com" required aria-required="true" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactCategory">Category</label>
+                <select id="contactCategory" class="form-control">
+                  <option value="">Select category</option>
+                  <option value="scheme-info">Scheme Information Query</option>
+                  <option value="incorrect-info">Report Incorrect Information</option>
+                  <option value="technical">Technical Issue</option>
+                  <option value="feedback">Feedback / Suggestion</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Message <span style="color:#dc3545">*</span></label>
+                <textarea id="contactMessage" class="form-control" placeholder="Describe your query or feedback in detail..." required aria-required="true" rows="5"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+                📤 Send Message
+              </button>
+
+              <p style="font-size:0.8rem;color:var(--text-muted);text-align:center;margin-top:0.75rem">
+                We respond within 24-48 hours. For urgent scheme queries, use government helplines below.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Helplines & Info -->
+        <div class="fade-in fade-in-delay-1">
+          <h2 style="margin-bottom:1.5rem">📞 Government Helplines</h2>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1.25rem">For official assistance with government schemes, contact these helplines directly:</p>
+
+          <div class="helpline-card">
+            <div class="helpline-name">🌾 PM Kisan Samman Nidhi</div>
+            <div class="helpline-number">155261</div>
+            <div class="helpline-hours">Also: 011-24300606 | Mon–Fri, 6am–10pm</div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="helpline-name">🏥 Ayushman Bharat - PMJAY</div>
+            <div class="helpline-number">14555</div>
+            <div class="helpline-hours">Also: 1800-111-565 | 24×7 Toll Free</div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="helpline-name">🏠 PM Awas Yojana</div>
+            <div class="helpline-number">1800-11-6446</div>
+            <div class="helpline-hours">Toll Free | Mon–Sat, 9am–6pm</div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="helpline-name">💼 MGNREGA</div>
+            <div class="helpline-number">1800-111-555</div>
+            <div class="helpline-hours">Also: 1800-180-1551 | Mon–Sat</div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="helpline-name">🔥 PM Ujjwala Yojana (LPG)</div>
+            <div class="helpline-number">1906</div>
+            <div class="helpline-hours">24×7 LPG Emergency Helpline</div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="helpline-name">📚 National Scholarship Portal</div>
+            <div class="helpline-number">0120-6619540</div>
+            <div class="helpline-hours">Mon–Fri, 9am–6pm</div>
+          </div>
+
+          <div class="helpline-card">
+            <div class="helpline-name">👩 Women Helpline</div>
+            <div class="helpline-number">1091</div>
+            <div class="helpline-hours">24×7 Toll Free | All India</div>
+          </div>
+
+          <div class="helpline-card" style="background:rgba(255,153,51,0.08);border-color:rgba(255,153,51,0.3)">
+            <div class="helpline-name">🇮🇳 PM India General Helpline</div>
+            <div class="helpline-number">1800-11-0031</div>
+            <div class="helpline-hours">Pradhan Mantri's Helpline | Toll Free</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Official Portals -->
+      <div style="margin-top:3.5rem">
+        <h2 class="text-center fade-in" style="margin-bottom:2rem">🔗 Official Government Portals</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem" class="fade-in">
+          <a href="https://india.gov.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">🏛️</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">National Portal</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">india.gov.in</div>
+          </a>
+          <a href="https://pmkisan.gov.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">🌾</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">PM Kisan</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">pmkisan.gov.in</div>
+          </a>
+          <a href="https://pmjay.gov.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">🏥</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">Ayushman Bharat</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">pmjay.gov.in</div>
+          </a>
+          <a href="https://nrega.nic.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">💼</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">MGNREGA</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">nrega.nic.in</div>
+          </a>
+          <a href="https://pmaymis.gov.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">🏠</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">PM Awas Yojana</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">pmaymis.gov.in</div>
+          </a>
+          <a href="https://scholarships.gov.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">📚</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">Scholarships</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">scholarships.gov.in</div>
+          </a>
+          <a href="https://www.mudra.org.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">💳</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">Mudra Yojana</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">mudra.org.in</div>
+          </a>
+          <a href="https://pmsuryaghar.gov.in" target="_blank" rel="noopener" class="card" style="padding:1.25rem;text-align:center;text-decoration:none">
+            <div style="font-size:1.75rem;margin-bottom:0.5rem">☀️</div>
+            <div style="font-weight:700;font-size:0.9rem;color:var(--text)">PM Surya Ghar</div>
+            <div style="font-size:0.78rem;color:var(--text-muted)">pmsuryaghar.gov.in</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div style="max-width:800px;margin:4rem auto 0">
+        <h2 class="text-center fade-in" style="margin-bottom:2rem">Common Questions</h2>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            How do I apply for PM Kisan Samman Nidhi?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <p style="color:var(--text-muted);margin:0">Visit pmkisan.gov.in and click "New Farmer Registration" under Farmers Corner. Enter your Aadhaar number and state. Fill in your personal details, land records, and bank account information. Alternatively, visit your nearest Common Service Centre (CSC) with your Aadhaar, land records, and bank passbook. Helpline: 155261.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            How do I check if I am eligible for Ayushman Bharat?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <p style="color:var(--text-muted);margin:0">Visit pmjay.gov.in and click "Am I Eligible?" option. Enter your mobile number and OTP to check. You can also call the helpline 14555 or 1800-111-565. Your eligibility is based on the SECC 2011 database for rural areas and defined occupational criteria for urban areas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            What documents are needed for most government schemes?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <p style="color:var(--text-muted);margin:0">Most government schemes require: (1) Aadhaar Card – most important, (2) Active Bank Account linked to Aadhaar, (3) Mobile number linked to Aadhaar, (4) Income Certificate from tehsildar/SDM, (5) Ration Card for BPL schemes, (6) Caste Certificate for SC/ST/OBC schemes, (7) Residence/Domicile Certificate. Specific schemes may require additional documents.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            What is a Common Service Centre (CSC)?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer" aria-hidden="true">
+            <p style="color:var(--text-muted);margin:0">Common Service Centres (CSCs) are government-authorized service centres available at gram panchayat level across India. They help citizens access digital government services, apply for schemes, and complete Aadhaar-based transactions. Find nearest CSC at locator.csccloud.in. Services at CSCs are heavily subsidized.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo-text">Benefit<span>Bridge</span></span>
+          <p>Connecting India's citizens to government welfare schemes.</p>
+          <p class="footer-disclaimer">⚠️ Informational platform only. Apply at official government portals.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="schemes.html">📋 All Schemes</a></li>
+            <li><a href="eligibility.html">✅ Check Eligibility</a></li>
+            <li><a href="tracker.html">📊 Track Application</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Information</div>
+          <ul class="footer-links">
+            <li><a href="about.html">ℹ️ About Us</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="about.html#faq">❓ FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Official Portals</div>
+          <ul class="footer-links">
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">india.gov.in</a></li>
+            <li><a href="https://pmkisan.gov.in" target="_blank" rel="noopener">PM Kisan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BenefitBridge. Made with ❤️ for India.</p>
+        <p>🇮🇳 Jan Seva — सेवा परमो धर्म</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/voice-assistant.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-question.open').forEach(q => {
+        q.classList.remove('open');
+        q.setAttribute('aria-expanded', 'false');
+        q.nextElementSibling.classList.remove('open');
+        q.nextElementSibling.setAttribute('aria-hidden', 'true');
+      });
+      if (!isOpen) {
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.classList.add('open');
+        answer.setAttribute('aria-hidden', 'false');
+      }
+    }
+
+    // Contact form handler
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      if (!name || !email || !message) {
+        showToast('Please fill in all required fields', 'error');
+        return;
+      }
+
+      // Simulate form submission
+      showToast('Message sent! We\'ll respond within 24-48 hours.', 'success');
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+</body>
+</html>

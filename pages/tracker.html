@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Track your government scheme application status. View timeline from application to benefit disbursement." />
+  <title>Application Tracker — BenefitBridge</title>
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#FF9933" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo" aria-label="BenefitBridge Home">
+        <div class="nav-logo-icon">🇮🇳</div>
+        <span class="nav-logo-text">Benefit<span>Bridge</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="schemes.html">Schemes</a></li>
+        <li><a href="eligibility.html">Check Eligibility</a></li>
+        <li><a href="tracker.html" class="active">Track Application</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="hi">हिंदी</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="tricolor-divider" aria-hidden="true"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Application Tracker</span>
+      </nav>
+      <h1>📊 Application Tracker</h1>
+      <p>Track the status of your government scheme applications with a reference number</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="tracker-page">
+    <div class="container">
+
+      <!-- Demo Note -->
+      <div class="card fade-in" style="max-width:700px;margin:0 auto 2rem;padding:1.25rem 1.5rem">
+        <div style="display:flex;align-items:flex-start;gap:0.75rem">
+          <span style="font-size:1.5rem;flex-shrink:0">ℹ️</span>
+          <div>
+            <strong style="color:var(--text)">Demo Tracker</strong>
+            <p style="margin:0.25rem 0 0;font-size:0.88rem;color:var(--text-muted)">This is a demonstration of how application tracking works. Use one of the sample reference numbers below or visit the official scheme portal for real tracking.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <div class="tracker-search fade-in" role="search" aria-label="Track application">
+        <input
+          type="text"
+          id="refInput"
+          class="form-control"
+          placeholder="Enter reference number (e.g., BB2024001)"
+          aria-label="Application reference number"
+          autocomplete="off"
+          style="text-transform:uppercase;font-weight:600;letter-spacing:1px"
+        />
+        <button id="trackBtn" class="btn btn-primary">
+          🔍 Track
+        </button>
+      </div>
+
+      <!-- Demo Reference Buttons -->
+      <div style="text-align:center;margin-bottom:2rem">
+        <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem">Try these demo reference numbers:</p>
+        <div class="demo-refs fade-in">
+          <button class="demo-ref-btn" data-ref="BB2024001" title="PM Kisan - Approved">
+            BB2024001 — PM Kisan ✅
+          </button>
+          <button class="demo-ref-btn" data-ref="BB2024002" title="Ayushman Bharat - Under Review">
+            BB2024002 — Ayushman 🔍
+          </button>
+          <button class="demo-ref-btn" data-ref="BB2024003" title="PM Awas - Documents Verified">
+            BB2024003 — PM Awas 📋
+          </button>
+          <button class="demo-ref-btn" data-ref="BB2024004" title="PM Mudra - Just Applied">
+            BB2024004 — Mudra Loan 📝
+          </button>
+        </div>
+      </div>
+
+      <!-- Tracker Result Area -->
+      <div class="tracker-result fade-in" id="trackerResult">
+        <!-- Results rendered here by JS -->
+        <div class="card" style="max-width:700px;margin:0 auto;padding:3rem 2rem;text-align:center">
+          <span style="font-size:3.5rem;display:block;margin-bottom:1rem">📊</span>
+          <h3>Enter Your Reference Number</h3>
+          <p>Enter the reference number you received when you applied for a government scheme, or try one of the demo numbers above.</p>
+        </div>
+      </div>
+
+      <!-- How Tracking Works -->
+      <div style="max-width:700px;margin:3rem auto 0">
+        <h3 class="text-center fade-in" style="margin-bottom:2rem">How Application Tracking Works</h3>
+        <div class="timeline fade-in">
+          <div class="timeline-item completed">
+            <div class="timeline-dot">📝</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Applied</div>
+              <div class="timeline-desc">You submit the application at the official portal or CSC</div>
+            </div>
+          </div>
+          <div class="timeline-item completed">
+            <div class="timeline-dot">📋</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Documents Verified</div>
+              <div class="timeline-desc">Your submitted documents are verified by officials</div>
+            </div>
+          </div>
+          <div class="timeline-item active">
+            <div class="timeline-dot">🔍</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Under Review</div>
+              <div class="timeline-desc">Application is being reviewed for eligibility and compliance</div>
+            </div>
+          </div>
+          <div class="timeline-item pending">
+            <div class="timeline-dot">✅</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Approved</div>
+              <div class="timeline-desc">Application is approved and benefit transfer is initiated</div>
+            </div>
+          </div>
+          <div class="timeline-item pending">
+            <div class="timeline-dot">💰</div>
+            <div class="timeline-content">
+              <div class="timeline-title">Benefit Disbursed</div>
+              <div class="timeline-desc">Benefits are transferred directly to your bank account</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Tracking Links -->
+      <div class="card fade-in" style="max-width:700px;margin:2.5rem auto;padding:1.75rem">
+        <h4 style="margin-bottom:1.25rem">🔗 Real Application Tracking Portals</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <a href="https://pmkisan.gov.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="justify-content:flex-start;gap:0.5rem">
+            🌾 PM Kisan Tracker
+          </a>
+          <a href="https://pmjay.gov.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="justify-content:flex-start;gap:0.5rem">
+            🏥 Ayushman Bharat
+          </a>
+          <a href="https://pmaymis.gov.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="justify-content:flex-start;gap:0.5rem">
+            🏠 PM Awas Yojana
+          </a>
+          <a href="https://nrega.nic.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="justify-content:flex-start;gap:0.5rem">
+            💼 MGNREGA Job Card
+          </a>
+          <a href="https://scholarships.gov.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="justify-content:flex-start;gap:0.5rem">
+            📚 Scholarships Portal
+          </a>
+          <a href="https://www.mudra.org.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="justify-content:flex-start;gap:0.5rem">
+            💳 Mudra Loan Portal
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo-text">Benefit<span>Bridge</span></span>
+          <p>Connecting India's citizens to government welfare schemes.</p>
+          <p class="footer-disclaimer">⚠️ Informational platform only. Apply at official government portals.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="schemes.html">📋 All Schemes</a></li>
+            <li><a href="eligibility.html">✅ Check Eligibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Help</div>
+          <ul class="footer-links">
+            <li><a href="about.html">ℹ️ About</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Official Portals</div>
+          <ul class="footer-links">
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">india.gov.in</a></li>
+            <li><a href="https://pmkisan.gov.in" target="_blank" rel="noopener">PM Kisan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BenefitBridge. Made with ❤️ for India.</p>
+        <p>🇮🇳 Jan Seva — सेवा परमो धर्म</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/tracker.js"></script>
+  <script src="../js/voice-assistant.js"></script>
+</body>
+</html>
