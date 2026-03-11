@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BenefitBridge - Access government welfare schemes without middlemen. Check eligibility, browse 500+ schemes, and apply directly. Free for all Indian citizens." />
+  <meta name="keywords" content="government schemes India, welfare benefits, PM Kisan, Ayushman Bharat, eligibility checker, government yojana" />
+  <meta name="author" content="BenefitBridge" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BenefitBridge — Access Your Government Benefits" />
+  <meta property="og:description" content="Digital platform to connect Indian citizens directly to government welfare schemes. No middlemen, no confusion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://benefitbridge.in" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#FF9933" />
+
+  <title>BenefitBridge — Access Your Government Benefits</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BenefitBridge Home">
+        <div class="nav-logo-icon">🇮🇳</div>
+        <span class="nav-logo-text">Benefit<span>Bridge</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/schemes.html">Schemes</a></li>
+        <li><a href="pages/eligibility.html">Check Eligibility</a></li>
+        <li><a href="pages/tracker.html">Track Application</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" data-lang="hi" aria-pressed="false">हिंदी</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tricolor Divider -->
+  <div class="tricolor-divider" aria-hidden="true"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="heroHeading">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text fade-in">
+          <div class="eyebrow">
+            🇮🇳 Digital India Initiative
+          </div>
+          <h1 id="heroHeading">
+            Access Your Government Benefits —<br>
+            <span>No Middlemen, No Confusion</span>
+          </h1>
+          <p>BenefitBridge connects you directly to 500+ government welfare schemes. Check your eligibility, understand your rights, and apply with confidence — completely free.</p>
+          <div class="hero-buttons">
+            <a href="pages/eligibility.html" class="btn btn-primary btn-lg">
+              ✅ Check My Eligibility
+            </a>
+            <a href="pages/schemes.html" class="btn btn-outline btn-lg">
+              📋 Browse All Schemes
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image fade-in fade-in-delay-2">
+          <div class="hero-visual">
+            <div style="text-align:center;margin-bottom:1.25rem">
+              <span style="font-size:2rem">🏛️</span>
+              <div style="font-family:var(--font-heading);font-weight:700;font-size:1rem;margin-top:0.5rem;color:var(--text)">Government Schemes at a Glance</div>
+            </div>
+            <div class="hero-visual-grid">
+              <div class="hero-stat-card orange">
+                <span class="stat-number" data-count="500">0</span>
+                <span class="stat-label">Schemes Listed</span>
+              </div>
+              <div class="hero-stat-card green">
+                <span class="stat-number" data-count="28">0</span>
+                <span class="stat-label">States Covered</span>
+              </div>
+              <div class="hero-stat-card blue">
+                <span class="stat-number" data-count="100">0</span>
+                <span class="stat-label">% Free Platform</span>
+              </div>
+              <div class="hero-stat-card orange">
+                <span class="stat-number" data-count="20">0</span>
+                <span class="stat-label">Key Schemes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar" aria-label="Key Statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <span class="number" data-count="500">0</span>
+          <span class="label">Government Schemes</span>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-1">
+          <span class="number" data-count="28">0</span>
+          <span class="label">States & UTs</span>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-2">
+          <span class="number" data-count="100">0</span>
+          <span class="label">% Free Service</span>
+        </div>
+        <div class="stat-item fade-in fade-in-delay-3">
+          <span class="number" data-count="0">0</span>
+          <span class="label">Middlemen Involved</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works section-padding" aria-labelledby="howHeading">
+    <div class="container text-center">
+      <h2 id="howHeading" class="section-title fade-in">How BenefitBridge Works</h2>
+      <p class="section-subtitle fade-in">Three simple steps to access your government benefits</p>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <span class="step-icon">📝</span>
+          <h3>Answer Simple Questions</h3>
+          <p>Tell us about your age, income, occupation, state, and category. No complex forms, just easy questions.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-1">
+          <div class="step-number">2</div>
+          <span class="step-icon">🎯</span>
+          <h3>Get Matched Schemes</h3>
+          <p>Our system instantly matches you with government schemes you're eligible for, ranked by relevance.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-2">
+          <div class="step-number">3</div>
+          <span class="step-icon">🚀</span>
+          <h3>Apply Directly</h3>
+          <p>Get direct links to official government portals, required documents list, and step-by-step guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Schemes -->
+  <section class="featured-schemes section-padding" aria-labelledby="featuredHeading">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem">
+        <h2 id="featuredHeading" class="section-title fade-in">Popular Government Schemes</h2>
+        <p class="section-subtitle fade-in">Explore some of India's most impactful welfare programmes</p>
+      </div>
+      <div class="schemes-grid" id="featuredSchemesGrid">
+        <!-- Loaded by JS -->
+        <div style="grid-column:1/-1;text-align:center;padding:2rem">
+          <div class="loading-spinner"></div>
+          <p>Loading schemes...</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:2.5rem">
+        <a href="pages/schemes.html" class="btn btn-primary btn-lg">
+          View All Schemes →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility CTA -->
+  <section class="eligibility-section section-padding" aria-labelledby="eligibilityHeading">
+    <div class="container">
+      <div class="eligibility-content">
+        <div class="fade-in">
+          <h2 id="eligibilityHeading">Find Out Which Schemes You Qualify For</h2>
+          <p>Our smart eligibility checker matches you with government schemes based on your personal profile — in under 2 minutes!</p>
+          <ul class="eligibility-features">
+            <li><span class="check">✓</span> 100% free, no registration needed</li>
+            <li><span class="check">✓</span> Works in Hindi and English</li>
+            <li><span class="check">✓</span> Covers 500+ central & state schemes</li>
+            <li><span class="check">✓</span> AI Voice Assistant available</li>
+            <li><span class="check">✓</span> Direct links to official portals</li>
+          </ul>
+          <a href="pages/eligibility.html" class="btn btn-primary btn-lg" style="margin-top:1.5rem">
+            ✅ Check My Eligibility Now
+          </a>
+        </div>
+        <div class="eligibility-card fade-in fade-in-delay-1">
+          <div style="font-weight:700;margin-bottom:1.25rem;font-size:1.05rem">Quick Preview</div>
+          <div class="mini-form-group">
+            <label>Your State</label>
+            <select class="mini-select" aria-label="Select state (preview only)">
+              <option>Select State</option>
+              <option>Uttar Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Tamil Nadu</option>
+              <option>West Bengal</option>
+              <option>Karnataka</option>
+              <option>Rajasthan</option>
+              <option>Madhya Pradesh</option>
+              <option>Bihar</option>
+            </select>
+          </div>
+          <div class="mini-form-group">
+            <label>Occupation</label>
+            <select class="mini-select" aria-label="Select occupation (preview only)">
+              <option>Select Occupation</option>
+              <option>Farmer</option>
+              <option>Daily Wage Laborer</option>
+              <option>Student</option>
+              <option>Self-Employed</option>
+              <option>Unemployed</option>
+            </select>
+          </div>
+          <a href="pages/eligibility.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem">
+            Start Full Eligibility Check →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo-text">Benefit<span>Bridge</span></span>
+          <p>Connecting India's citizens to government welfare schemes — directly, transparently, and for free.</p>
+          <p class="footer-disclaimer">⚠️ BenefitBridge is an informational platform only. We do not process applications or guarantee benefits. All applications must be made at official government portals.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="pages/schemes.html">📋 All Schemes</a></li>
+            <li><a href="pages/eligibility.html">✅ Check Eligibility</a></li>
+            <li><a href="pages/tracker.html">📊 Track Application</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Information</div>
+          <ul class="footer-links">
+            <li><a href="pages/about.html">ℹ️ About Us</a></li>
+            <li><a href="pages/contact.html">📞 Contact & Help</a></li>
+            <li><a href="pages/about.html#faq">❓ FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Official Portals</div>
+          <ul class="footer-links">
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">india.gov.in</a></li>
+            <li><a href="https://pmkisan.gov.in" target="_blank" rel="noopener">PM Kisan</a></li>
+            <li><a href="https://pmjay.gov.in" target="_blank" rel="noopener">Ayushman Bharat</a></li>
+            <li><a href="https://scholarships.gov.in" target="_blank" rel="noopener">Scholarships</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BenefitBridge. Made with ❤️ for India. | MIT License</p>
+        <p>🇮🇳 Jan Seva — सेवा परमो धर्म</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/voice-assistant.js"></script>
+  <script>
+    // Load featured schemes on homepage
+    (async () => {
+      const schemes = await loadSchemes();
+      const grid = document.getElementById('featuredSchemesGrid');
+      if (!grid) return;
+      const featured = schemes.slice(0, 6);
+      grid.innerHTML = featured.map(s => buildSchemeCard(s)).join('');
+
+      grid.querySelectorAll('.scheme-card, .view-details-btn').forEach(el => {
+        el.addEventListener('click', () => {
+          const id = el.dataset.id || el.closest('.scheme-card')?.dataset.id;
+          if (id) {
+            const scheme = schemes.find(s => s.id === id);
+            if (scheme) openSchemeModal(scheme);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
